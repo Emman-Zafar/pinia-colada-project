@@ -1,0 +1,22 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "rootDir": "..",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@pinia/colada": ["../src/index.ts"]
+    },
+    "types": ["unplugin-vue-router/client"],
+    "noEmit": true
+  },
+  "include": [
+    "env.d.ts",
+    "./typed-router.d.ts",
+    "src",
+    "src/**/*.vue",
+    "../src"
+  ],
+  "exclude": ["src/**/__tests__/*"]
+}
